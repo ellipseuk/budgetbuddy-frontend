@@ -1,6 +1,6 @@
-# budget_buddy
+# BudgetBuddy
 
-A new Flutter project.
+A Finance Tracker project.
 
 ## Getting Started
 
