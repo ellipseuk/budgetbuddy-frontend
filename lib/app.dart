@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:budget_buddy/theme/theme.dart';
-import 'package:budget_buddy/router/routes.dart';
+import 'package:budget_buddy/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
