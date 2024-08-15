@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:budget_buddy/theme/theme.dart';
+import 'package:budget_buddy/router/routes.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'BudgetBuddy',
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme,
+      routes:routes,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('BudgetBuddy'),
