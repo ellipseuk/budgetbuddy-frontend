@@ -15,14 +15,24 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const FlutterLogo(),
-              const SizedBox(width: 10),
-              Text(widget.title),
-            ],
+        backgroundColor: Colors.grey[50],
+        elevation: 0,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 25),
+          child: Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const FlutterLogo(),
+                const SizedBox(width: 10),
+                Text(
+                  widget.title,
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontSize:24,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -36,17 +46,21 @@ class _StartScreenState extends State<StartScreen> {
               height: 190,
             ),
             const SizedBox(height: 35), 
-            Text('Welcome to ${widget.title}'),
+            Text(
+              'Welcome to ${widget.title}',
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                fontSize:14,
+              ),
+            ),
             const SizedBox(height: 10),
-            const SizedBox(
+            SizedBox(
               width: 300,
               child: Text(
               'Take control of your finances and achieve your financial goals with ease. Let\'s get started on your journey to financial freedom!',
-              style: TextStyle(
-                color: Color.fromRGBO(108, 117, 125, 100),
-                fontSize: 12,
-              ),
-              textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontSize:12,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
             const SizedBox(height: 20),
@@ -85,14 +99,13 @@ class _StartScreenState extends State<StartScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            const SizedBox(
+            SizedBox(
               width: 300,
               child: Text(
               'By using FinanceIQ you agree to FinanceIQ’s Terms of Use, Privacy Policy and Pre-contractual Terms',
-              style: TextStyle(
-                color: Color.fromRGBO(108, 117, 125, 100),
-                fontSize: 10,
-              ),
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontSize:10,
+                ),
               textAlign: TextAlign.center,
             ),
             ),
