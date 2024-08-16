@@ -11,14 +11,6 @@ class MyApp extends StatelessWidget {
       title: 'BudgetBuddy',
       theme: theme,
       routes:routes,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('BudgetBuddy'),
-        ),
-        body: const Center(
-          child: Text('Hello, World!'),
-        ),
-      ),
     );
   }
 }
