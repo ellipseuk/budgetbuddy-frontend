@@ -10,7 +10,6 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +35,7 @@ class _StartScreenState extends State<StartScreen> {
           ),
         ),
       ),
+      
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

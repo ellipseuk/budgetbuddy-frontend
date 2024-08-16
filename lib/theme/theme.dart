@@ -15,13 +15,13 @@ final theme = ThemeData(
     ),
   ),
   useMaterial3: false,
-  textTheme: const TextTheme(
+  textTheme: TextTheme(
     titleLarge: TextStyle(
-      color: Color.fromRGBO(52, 58, 64, 100),
+      color: Colors.black.withOpacity(0.8),
       fontFamily: 'Roboto',
     ),
-    bodySmall: TextStyle(
-      color: Color.fromRGBO(108, 117, 125, 100),
+    bodySmall: const TextStyle(
+      color: Color.fromRGBO(108, 117, 125, 1),
       fontFamily: 'Roboto',
     ),
   ),
