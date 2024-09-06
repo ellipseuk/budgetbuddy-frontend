@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const Color primaryColor = Color.fromRGBO(98, 0, 238, 100);
+
 final theme = ThemeData(
   primarySwatch: Colors.deepPurple,
   dividerColor: Colors.black.withOpacity(0.2),
@@ -14,15 +16,13 @@ final theme = ThemeData(
   ),
   useMaterial3: false,
   textTheme: TextTheme(
-    bodyMedium: const TextStyle(
-      color: Colors.black,
-      fontWeight: FontWeight.w500,
-      fontSize: 20,
+    titleLarge: TextStyle(
+      color: Colors.black.withOpacity(0.8),
+      fontFamily: 'Roboto',
     ),
-    labelSmall: TextStyle(
-      color: Colors.black.withOpacity(0.6),
-      fontWeight: FontWeight.w700,
-      fontSize: 14,
+    bodySmall: const TextStyle(
+      color: Color.fromRGBO(108, 117, 125, 1),
+      fontFamily: 'Roboto',
     ),
   ),
 );
