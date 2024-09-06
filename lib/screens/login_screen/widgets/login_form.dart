@@ -1,7 +1,9 @@
+import 'package:budget_buddy/screens/login_screen/widgets/login_button.dart';
 import 'email_field.dart';
 import 'package:budget_buddy/screens/login_screen/widgets/forgot_password_link.dart';
 import 'package:budget_buddy/screens/login_screen/widgets/password_field.dart';
 import 'package:flutter/material.dart';
+import 'package:budget_buddy/screens/login_screen/widgets/footer.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -43,6 +45,22 @@ class _LoginFormState extends State<LoginForm> {
           }),
           const SizedBox(height: 10),
           const ForgotPasswordLink(),
+          const SizedBox(height: 20),
+          const LoginButton(),
+          const SizedBox(height: 25),
+          const Row(
+            children: <Widget>[
+                Expanded(
+                    child: Divider()
+                ),       
+                Text("or"),        
+                Expanded(
+                    child: Divider()
+                ),
+            ]
+          ),
+          const SizedBox(height: 20),
+          const Footer(),
         ],
       ),
     );

@@ -4,4 +4,3 @@ import 'package:budget_buddy/app.dart';
 void main() {
   runApp(const MyApp());
 }
-
