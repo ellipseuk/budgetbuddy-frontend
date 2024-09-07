@@ -28,7 +28,7 @@ class PasswordField extends StatelessWidget {
               onPressed: toggleVisibility,
             ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(30),
             ),
             hintText: 'Enter your password',
           ),

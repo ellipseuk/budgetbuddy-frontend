@@ -16,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: ReturnArrowAppBar(),
-      body: LoginBody(),
+      body: SingleChildScrollView(child: LoginBody()),
     );
   }
 }

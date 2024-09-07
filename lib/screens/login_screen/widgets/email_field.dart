@@ -16,7 +16,7 @@ class EmailField extends StatelessWidget {
         TextField(
           decoration: InputDecoration(
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(30),
             ),
             hintText: 'Enter your email',
           ),
