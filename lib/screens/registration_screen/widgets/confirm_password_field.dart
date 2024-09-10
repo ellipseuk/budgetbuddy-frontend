@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PasswordField extends StatelessWidget {
-  final bool isObscure;
-  final VoidCallback toggleVisibility;
-
-  const PasswordField({
+class ConfirmPasswordField extends StatelessWidget {
+  final bool confirmIsObscure;
+  final VoidCallback confirmToggleVisibility;
+  
+  const ConfirmPasswordField({
     super.key,
-    required this.isObscure,
-    required this.toggleVisibility,
+    required this.confirmIsObscure,
+    required this.confirmToggleVisibility,
   });
 
   @override
@@ -21,11 +21,11 @@ class PasswordField extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         TextField(
-          obscureText: isObscure,
+          obscureText: confirmIsObscure,
           decoration: InputDecoration(
             suffixIcon: IconButton(
-              icon: Icon(isObscure ? Icons.visibility_off : Icons.visibility),
-              onPressed: toggleVisibility,
+              icon: Icon(confirmIsObscure ? Icons.visibility_off : Icons.visibility),
+              onPressed: confirmToggleVisibility,
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),

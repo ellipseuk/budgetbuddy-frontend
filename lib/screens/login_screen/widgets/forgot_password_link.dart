@@ -13,7 +13,7 @@ class ForgotPasswordLink extends StatelessWidget {
         },
         child: Text(
           'Forgot your password?',
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 12),
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 12,fontWeight: FontWeight.w500),
         ),
       ),
     );

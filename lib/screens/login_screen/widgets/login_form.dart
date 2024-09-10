@@ -1,4 +1,6 @@
 import 'package:budget_buddy/screens/login_screen/widgets/login_button.dart';
+import 'package:budget_buddy/screens/login_screen/widgets/or_divider.dart';
+import 'package:budget_buddy/screens/login_screen/widgets/register.dart';
 import 'email_field.dart';
 import 'package:budget_buddy/screens/login_screen/widgets/forgot_password_link.dart';
 import 'package:budget_buddy/screens/login_screen/widgets/password_field.dart';
@@ -48,19 +50,12 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(height: 20),
           const LoginButton(),
           const SizedBox(height: 25),
-          const Row(
-            children: <Widget>[
-                Expanded(
-                    child: Divider()
-                ),       
-                Text("or"),        
-                Expanded(
-                    child: Divider()
-                ),
-            ]
-          ),
+          const OrDivider(),
           const SizedBox(height: 20),
           const Footer(),
+          const SizedBox(height: 80),
+          const Register(),
+          const SizedBox(height: 15,)
         ],
       ),
     );

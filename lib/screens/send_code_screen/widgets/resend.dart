@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-class Register extends StatelessWidget {
-  const Register({super.key});
+
+class ResendCode extends StatelessWidget {
+  const ResendCode({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -8,7 +9,7 @@ class Register extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Don't have an acconunt?",
+          "Didn't receive the code?",
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             fontSize:12,
             fontWeight: FontWeight.w500,
@@ -17,11 +18,11 @@ class Register extends StatelessWidget {
         const SizedBox(width: 5),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, '/registration');
+            // resend logic
           },
           child: 
             Text(
-              "Register",
+              "Resend",
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                 color:Colors.deepPurple,
                 fontSize: 12,
