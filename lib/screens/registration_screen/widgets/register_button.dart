@@ -10,7 +10,7 @@ class RegisterButton extends StatelessWidget {
             height: 50,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pushNamed(context, '/code');
               },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(

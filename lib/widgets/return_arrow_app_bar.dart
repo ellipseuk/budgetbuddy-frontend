@@ -21,6 +21,8 @@ class ReturnArrowAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           child: IconButton(
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
             icon: const Icon(Icons.arrow_back),
             color: Colors.black,
             onPressed: () {
