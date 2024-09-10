@@ -20,7 +20,7 @@ class SendCodeBody extends StatelessWidget {
             Verify(),
             SizedBox(height: 25),
             CodeField(),
-            SizedBox(height: 25),
+            SizedBox(height: 15),
             ResendCode(),
             SizedBox(height: 10)
           ]

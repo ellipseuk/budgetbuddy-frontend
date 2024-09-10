@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -10,11 +11,35 @@ class CodeField extends StatefulWidget {
 
 class _CodeFieldState extends State<CodeField> {
   bool InvalidOtp = false;
+  int resendTime = 120;
+  late Timer countdownTimer;
   TextEditingController txt1 = TextEditingController();
   TextEditingController txt2 = TextEditingController();
   TextEditingController txt3 = TextEditingController();
   TextEditingController txt4 = TextEditingController();
   TextEditingController txt5 = TextEditingController();
+
+  @override
+  void initState() {
+    startTimer();
+    super.initState();
+  }
+  startTimer(){
+    countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer){
+      setState((){
+        resendTime = resendTime -1;
+      });
+      if(resendTime<1){
+        countdownTimer.cancel();
+      }
+    });
+  }
+
+  stopTimer() {
+    if (countdownTimer.isActive) {
+      countdownTimer.cancel();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +56,7 @@ class _CodeFieldState extends State<CodeField> {
           ],
         ),
         const SizedBox(height: 12),
-        Text(InvalidOtp ? 'Invalid Otp!' : '',
+        Text(InvalidOtp ? 'Invalid code!' : '',
         style: Theme.of(context).textTheme.bodySmall?.copyWith(
           fontSize: 14,
           fontWeight: FontWeight.w400,
@@ -63,6 +88,15 @@ class _CodeFieldState extends State<CodeField> {
             child: const Text('Send code')
           ),
         ),
+        const SizedBox(height: 15),
+        resendTime != 0 ? Text(
+          "You can resend the code after $resendTime seconds(s)", 
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            fontSize: 14, 
+            fontWeight: FontWeight.w400
+            ),
+        )
+        : const SizedBox()
       ],
     );
   }
