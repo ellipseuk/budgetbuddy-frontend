@@ -1,5 +1,6 @@
 import 'package:budget_buddy/screens/send_code_screen/widgets/code_field.dart';
 import 'package:budget_buddy/screens/send_code_screen/widgets/code_image.dart';
+import 'package:budget_buddy/screens/send_code_screen/widgets/resend.dart';
 import 'package:budget_buddy/screens/send_code_screen/widgets/verify.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,9 @@ class SendCodeBody extends StatelessWidget {
             Verify(),
             SizedBox(height: 25),
             CodeField(),
+            SizedBox(height: 25),
+            ResendCode(),
+            SizedBox(height: 10)
           ]
         ),
       )
